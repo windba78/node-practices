@@ -92,7 +92,7 @@
 
 3.	설치
 
-	파이썬 소스를 다운로드 받아 컴파일 설치하는 것은 비교적 쉽다. 설치 위치는 /usr/local/kickscar/python3.7.6 이고 라이브러는 공유 라이브러리로 설치하였기 때문에 앞의 libssl과 마찬가지로 공유 라이브러리 캐시 설정을 한다.
+	파이썬 소스를 다운로드 받아 컴파일 설치하는 것은 비교적 쉽다. 설치 위치는 /usr/local/douzone/python3.7.6 이고 라이브러는 공유 라이브러리로 설치하였기 때문에 앞의 libssl과 마찬가지로 공유 라이브러리 캐시 설정을 한다.
 
 	-	소스 컴파일 및 설치
 		
@@ -101,7 +101,7 @@
 	tar xvfz Python-3.7.6.tgz 
 	cd Python-3.7.6
 
-	./configure --prefix=/usr/local/kickscar/python3.7.6 --with-openssl=/usr/local/ssl --enable-shared
+	./configure --prefix=/usr/local/douzone/python3.7.6 --with-openssl=/usr/local/ssl --enable-shared
 	make
 	make install
 	```
@@ -116,7 +116,7 @@
 	-	python.conf 내용
 
 		```sh
-		/usr/local/kickscar/python3.7.6/lib
+		/usr/local/douzone/python3.7.6/lib
 		```
 
 	-	ldconfig 실행 및 확인
@@ -124,7 +124,7 @@
 		```sh
 		ldconfig -v | grep python
 		
-		/usr/local/kickscar/python3.7.6/lib:
+		/usr/local/douzone/python3.7.6/lib:
 			libpython3.so -> libpython3.so
 			libpython3.7m.so.1.0 -> libpython3.7m.so.1.0
 			libpython2.7.so.1.0 -> libpython2.7.so.1.0
@@ -136,14 +136,14 @@
 	-	설치 디렉토리 링크 및 PATH 설정
 
 		```sh
-		ln -s /etc/usr/kickscar/python3.7.6 /etc/usr/kickscar/python
+		ln -s /etc/usr/douzone/python3.7.6 /etc/usr/douzone/python
 		```
 
 	-	/etc/profile 수정
 
 		```sh
 		# python
-		export PATH=$PATH:/usr/local/kickscar/python/bin
+		export PATH=$PATH:/usr/local/douzone/python/bin
 		
 		```
 
@@ -277,14 +277,14 @@
     ```
 
 2.	설치
-    v14.4.0을 설치할 것이다. /usr/local/kickscar/node-v14.4.0에 설치할 것이다.
+    v16.15.1을 설치할 것이다. /usr/local/douzonr/node-v16.15.1에 설치할 것이다.
 
     ```sh
-    wget https://nodejs.org/dist/v14.4.0/node-v14.4.0.tar.gz
-    tar xvfz node-v14.4.0.tar.gz
+    wget https://nodejs.org/dist/v16.15.1/node-v16.15.1.tar.gz
+    tar xvfz node-v16.15.1.tar.gz
     
-	cd node-v14.4.0
-	./configure --prefix=/usr/local/kickscar/node-v14.4.0
+	cd node-v16.15.1
+	./configure --prefix=/usr/local/douzone/node-v16.15.1
     make && make install
 	
     ```
@@ -292,7 +292,7 @@
 3.	링크 작업
 
     ```sh
-    ln -s /usr/local/kickscar/node-v14.4.0 /usr/local/kickscar/node
+    ln -s /usr/local/douzone/node-v16.15.1 /usr/local/douzone/node-v16.15.1
 	
     ```
 
@@ -300,7 +300,7 @@
 
     ```sh
     # node 
-    export PATH=$PATH:/usr/local/kickscar/node/bin
+    export PATH=$PATH:/usr/local/douzone/node/bin
     ```
 
 5.	설정 적용 및 설치 확인
@@ -309,5 +309,5 @@
     source /etc/profile
     node --version
     
-	v14.3.0
+	v16.15.1
     ```
