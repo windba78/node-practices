@@ -277,7 +277,7 @@
     ```
 
 2.	설치
-    v16.15.1을 설치할 것이다. /usr/local/douzonr/node-v16.15.1에 설치할 것이다.
+    v16.15.1을 설치할 것이다. /usr/local/douzone/node-v16.15.1에 설치할 것이다.
 
     ```sh
     wget https://nodejs.org/dist/v16.15.1/node-v16.15.1.tar.gz
@@ -299,7 +299,7 @@
 4.	PATH 설정 (/etc/profile)
 
     ```sh
-    # node 
+    # node16 
     export PATH=$PATH:/usr/local/douzone/node/bin
     ```
 
