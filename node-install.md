@@ -292,7 +292,7 @@
 3.	링크 작업
 
     ```sh
-    ln -s /usr/local/douzone/node-v16.15.1 /usr/local/douzone/node-v16.15.1
+    ln -s /usr/local/douzone/node-v16.15.1 /usr/local/douzone/node
 	
     ```
 
